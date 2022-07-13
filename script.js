@@ -108,3 +108,8 @@ const a = prompt("Один из последних просмотренных ф
       personalMovieDB.movies[c] = d;
 
       console.log(personalMovieDB);
+
+    //   п.20 УСЛОВИЯ
+    if (4 == 4) {
+        console.log("Ok!");
+    }
