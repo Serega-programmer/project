@@ -88,3 +88,23 @@ let incr = 10,
         //  Пример: в браузере - результат Привет, Serega. Т.о. можно подставлять значения из любой БД.
         const user = "Serega";
         alert(`Привет, ${user}`);
+
+        // Задание 1
+const number0Films = prompt("Сколько фильмов вы уже посмотрели?", "");
+// Задание 2
+const personalMovieDB = {
+    count: number0Films,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+// Задание 3
+const a = prompt("Один из последних просмотренных фильмов?", ""),
+      b = prompt("На сколько оцените его", ""),
+      c = prompt("Один из последних просмотренных фильмов?", "" ),
+      d = prompt("На сколько оцените его", "");
+      personalMovieDB.movies[a] = b;
+      personalMovieDB.movies[c] = d;
+
+      console.log(personalMovieDB);
