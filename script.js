@@ -89,6 +89,7 @@ let incr = 10,
         const user = "Serega";
         alert(`Привет, ${user}`);
 
+<<<<<<< HEAD
         // п.20 УСЛОВИЯ
          if(4==4) {
             console.log(`Ok!`);
@@ -124,3 +125,29 @@ let incr = 10,
                     default:
                         console.log(`Не в этот раз`);
                     }
+=======
+        // Задание 1
+const number0Films = prompt("Сколько фильмов вы уже посмотрели?", "");
+// Задание 2
+const personalMovieDB = {
+    count: number0Films,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+// Задание 3
+const a = prompt("Один из последних просмотренных фильмов?", ""),
+      b = prompt("На сколько оцените его", ""),
+      c = prompt("Один из последних просмотренных фильмов?", "" ),
+      d = prompt("На сколько оцените его", "");
+      personalMovieDB.movies[a] = b;
+      personalMovieDB.movies[c] = d;
+
+      console.log(personalMovieDB);
+
+    //   п.20 УСЛОВИЯ
+    if (4 == 4) {
+        console.log("Ok!");
+    }
+>>>>>>> 2b289a0b2ed5d180871aed361c9d61bb79c3c8ed
