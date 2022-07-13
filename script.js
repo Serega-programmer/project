@@ -89,7 +89,7 @@ let incr = 10,
         const user = "Serega";
         alert(`Привет, ${user}`);
 
-<<<<<<< HEAD
+
         // п.20 УСЛОВИЯ
          if(4==4) {
             console.log(`Ok!`);
@@ -125,7 +125,7 @@ let incr = 10,
                     default:
                         console.log(`Не в этот раз`);
                     }
-=======
+
         // Задание 1
 const number0Films = prompt("Сколько фильмов вы уже посмотрели?", "");
 // Задание 2
@@ -150,4 +150,4 @@ const a = prompt("Один из последних просмотренных ф
     if (4 == 4) {
         console.log("Ok!");
     }
->>>>>>> 2b289a0b2ed5d180871aed361c9d61bb79c3c8ed
+
