@@ -29,104 +29,67 @@ console.log(number);
 // console.log(und); - результат underfind, т.к. в "коробке"und ничего не задано
 const obj = {
     name: "John",
-    age:25 ,
+    age: 25,
     ismarried: false
 };
 console.log(obj.name);
-            // 0               1           2
+// 0               1           2
 // let arr = ["plum.png", "orange.jpg", 6];
 // console.log(arr[1]); - вывод массива в результат (задаем цифру 1, т.к. нумерация начинается с нуля).Ответ: orange.jpg
 
 const answers = [];
-answers [0] = prompt("Как ваше имя?", "");
-answers [1] = prompt("Как ваша фамилия?", "");
-answers [2] = prompt("Сколько вам лет?", "");
+answers[0] = prompt("Как ваше имя?", "");
+answers[1] = prompt("Как ваша фамилия?", "");
+answers[2] = prompt("Сколько вам лет?", "");
 // console.log(answers);
 document.write(answers);
 
 // п.15 Операторы в JS: сложение, вычитание, умножение, деление
-console.log("arr"+ "-object");
-console.log(4+ "5");
+console.log("arr" + "-object");
+console.log(4 + "5");
 
 let incr = 10,
     decr = 10;
-    // ++incr;
-    // --decr;
-    console.log(incr++);
-    console.log(decr--);
+// ++incr;
+// --decr;
+console.log(incr++);
+console.log(decr--);
 
-    // console.log(2*4 === `8`); - результат false
-    // console.log(2*4 === 8); - результат true (8 без кавычек)
+// console.log(2*4 === `8`); - результат false
+// console.log(2*4 === 8); - результат true (8 без кавычек)
 
-    // & - и
-    // || - или
-    // const isChecked = true,
-    //       isClose = true;
-    //       console.log(isChecked && isClose); - результат true
+// & - и
+// || - или
+// const isChecked = true,
+//       isClose = true;
+//       console.log(isChecked && isClose); - результат true
 
-        //   const isChecked = true,
-        //   isClose = false;
-        //   console.log(isChecked && isClose); - результат false
+//   const isChecked = true,
+//   isClose = false;
+//   console.log(isChecked && isClose); - результат false
 
-         const isChecked = false,
-           isClose = false;
-           console.log(isChecked || !isClose); 
+const isChecked = false,
+    isClose = false;
+console.log(isChecked || !isClose);
 
-        //    ! - оператор отрицания (обращает true в false)
-        // != - знак неравенства
-        // при строгом сравнении == результат будет true
-        // при одном =, т.е. 6=6 - результат false (что строка, что нет)
-        console.log(2+2*2 !=`6`);
+//    ! - оператор отрицания (обращает true в false)
+// != - знак неравенства
+// при строгом сравнении == результат будет true
+// при одном =, т.е. 6=6 - результат false (что строка, что нет)
+console.log(2 + 2 * 2 != `6`);
 
-        // п.14 Интерполяция (ES6)
+// п.14 Интерполяция (ES6)
 
-        // const category = "toys";
-        // console.log("https://someurl.com/" +category); - при использовании двойных и одинарных кавычек
-        const category = "toys";
-         console.log(`https://someurl.com/${category}/5`);
+// const category = "toys";
+// console.log("https://someurl.com/" +category); - при использовании двойных и одинарных кавычек
+const category = "toys";
+console.log(`https://someurl.com/${category}/5`);
 
-        //  Пример: в браузере - результат Привет, Serega. Т.о. можно подставлять значения из любой БД.
-        const user = "Serega";
-        alert(`Привет, ${user}`);
+//  Пример: в браузере - результат Привет, Serega. Т.о. можно подставлять значения из любой БД.
+const user = "Serega";
+alert(`Привет, ${user}`);
 
-
-        // п.20 УСЛОВИЯ
-         if(4==4) {
-            console.log(`Ok!`);
-         }
-         if(4==5) {
-            console.log(`OK`);
-         } else {
-            console.log(`Error`);
-         }
-        
-        //  Создадим переменную num=50
-        // const num=50
-        // if(num<49){
-        // console.log(`Error`);
-        // } else if(num>100) {
-        //     console.log(`Много`);
-        // } else {
-        //     console.log(`Ok`);
-        // }
-        //     (num===50) ? console.log(`Ok`) : console.log(`Error`);
-
-            const num = 50;
-         switch (num) {
-            case 49:
-                console.log(`Неверно`);
-                break;
-                case 100:
-                    console.log(`Неверно`);
-                    break;
-                    case 56:
-                    console.log(`В точку!`);
-                    break;
-                    default:
-                        console.log(`Не в этот раз`);
-                    }
-
-        // Задание 1
+// Задание 1
 const number0Films = prompt("Сколько фильмов вы уже посмотрели?", "");
 // Задание 2
 const personalMovieDB = {
@@ -138,16 +101,56 @@ const personalMovieDB = {
 };
 // Задание 3
 const a = prompt("Один из последних просмотренных фильмов?", ""),
-      b = prompt("На сколько оцените его", ""),
-      c = prompt("Один из последних просмотренных фильмов?", "" ),
-      d = prompt("На сколько оцените его", "");
-      personalMovieDB.movies[a] = b;
-      personalMovieDB.movies[c] = d;
+    b = prompt("На сколько оцените его", ""),
+    c = prompt("Один из последних просмотренных фильмов?", ""),
+    d = prompt("На сколько оцените его", "");
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-      console.log(personalMovieDB);
+console.log(personalMovieDB);
 
-    //   п.20 УСЛОВИЯ
-    if (4 == 4) {
-        console.log("Ok!");
-    }
+//   п.20 УСЛОВИЯ
+if (4 == 9) {
+    console.log("Ok!");
+} else {
+    console.log("Error");
+}
+// const num =50;
+// if(num<49){
+//     console.log(`Error`);
+// } else if(num>100) {
+//     console.log(`Много`);
+// } else {
+//     console.log(`Ok`);
+// }
+//  const num = 50
+// Есть другой синтаксис записи условий: внедряем тернарный оператор(т.е. в его работе используются 3 аргумента)
+//  1 аргумент   2 аргумент           3 аргумент
+// num===50 ? console.log(`Ok!`) : console.log(`Error`);
+//  const num = 50;
+// (num===50) ? console.log(`Ok!`) : console.log(`Error`);
 
+// Если модификаций if очень много, то их упрощаем  с помощью switch
+const num = 50;
+switch (num) {
+case 49:
+    console.log(`Неверно`);
+    // break - всегда идет после console.log!!!
+    break;
+    case 100:
+        console.log(`Неверно`);
+        break;
+        case 50:
+            console.log(`В точку!`);
+            break;
+            // Может case не выполнятся (если одно из условий не подошло), тогда используем default
+            default:
+                console.log(`Не в этот раз`);
+} 
+// п.21 ЛОГИЧЕСКИЕ ОПЕРАТОРЫ
+const hamburger = true;
+const fries = true;
+if (hamburger && fries) {
+console.log(`Я сыт`);
+}
+console.log((hamburger && fries));
