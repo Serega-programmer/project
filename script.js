@@ -149,55 +149,41 @@ case 49:
 } 
 // п.21 ЛОГИЧЕСКИЕ ОПЕРАТОРЫ
 // const hamburger = true;
-// const fries = true;
+// const fries = false;
 // if (hamburger && fries) {
 // console.log(`Я сыт`);
 // }
-// console.log((hamburger && fries));
+// console.log((hamburger && fries)); 
 
-// const hamburger = 2;
-// const fries = 1;
-// if (hamburger ===3 && fries) {
-// console.log (`Все сыты`);
-// } else {
-//     console.log(`Мы уходим`);
-// } -результат: Мы уходим
-
-// const hamburger = 3;
-// const fries = 1;
-// const cola = 0;
-// console.log(hamburger===3 && cola && fries);
-// Результат 0, т.к. на cola все остановилось(а у const cola = 0), то и результат будет 0
-
-// Это пример:
-//  console.log(2 && 8);
-// console.log(null && 25);
-// console.log(23 && `hchd`);
-// console.log( 0 && 10);
-// Результат: 8, null, `hchd`, 0
-
-// if (hamburger===3 && cola===1 && fries) {
-//     console.log(`Все сыты`);
-// } else {
-//     console.log(`Мы уходим`);
-// }console.log(hamburger===3 && cola===1 && fries);
-
-// Оператор "или"
-// const hamburger = 3;
-// const fries = 0;
-// const cola =0;
-// if (hamburger || cola || fries) {
-//     console.log(`Все довольны`);
-// } else {
-//     console.log(`Мы уходим`);
-// }
-// Результат : Все довольны. Т.е. оператор "или" перестает работать, когда находит первое правдивое значение (остальная часть кода не читается)
-const hamburger = 3;
-const fries = 3;
-const cola = 0;
-const nuggets = 2;
-if (hamburger===3 && cola===2 || fries===3 && nuggets) {
-    console.log(`Все довольны`);
+const hamburger = 2;
+const fries = 1;
+if (hamburger===3 && fries) {
+console.log(`Все сыты`); 
 } else {
     console.log(`Мы уходим`);
 }
+// п.23 ЦИКЛ ВНУТРИ ЦИКЛА
+
+for(let i = 0; i<3; i++) {
+    console.log(i);
+    for(let j = 0; j<3; j++) {
+console.log(j);
+    }
+}
+
+// Решим задачу:
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+let result =``;
+const length = 7;
+for(let i = 1; i<length; i++) {
+for(let j = 0; j<i; j++) {
+    result+="*"; 
+}
+result+="\n";
+}
+console.log(result);
