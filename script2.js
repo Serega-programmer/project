@@ -1,25 +1,11 @@
-"use strict";
+function fifthTask() {
+    const arrayOfNumbers = [];
 
-let num = 5;
-while(num <= 10) {
-    console.log(num);
-    num++;
+    for (let i = 5; i < 11; i++) {
+        arrayOfNumbers[i - 5] = i;
+    }
+
+    console.log(arrayOfNumbers);
+    return arrayOfNumbers;
 }
-
-// for(let i = 5; i<11; i++) {
-//     console.log(i);
-// }
-
-
-
-
-
-
-
-// // for (let i = 1; i<10; i++) {
-//     if(i===6) {
-//     // break; 
-//     continue;
-//     }
-//     // console.log(i);
-// // }
+    
