@@ -1,8 +1,25 @@
-let hamburger;
-const fries = NaN;
-const cola = 0;
-const nuggets = 2;
- 
-if (hamburger && cola || fries === 3 && nuggets) {
-   console.log(hamburger && cola || fries === 3 && nuggets);
+"use strict";
+
+let num = 5;
+while(num <= 10) {
+    console.log(num);
+    num++;
 }
+
+// for(let i = 5; i<11; i++) {
+//     console.log(i);
+// }
+
+
+
+
+
+
+
+// // for (let i = 1; i<10; i++) {
+//     if(i===6) {
+//     // break; 
+//     continue;
+//     }
+//     // console.log(i);
+// // }
