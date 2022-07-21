@@ -1,11 +1,4 @@
-function fifthTask() {
-    const arrayOfNumbers = [];
+"use strict";
 
-    for (let i = 5; i < 11; i++) {
-        arrayOfNumbers[i - 5] = i;
-    }
-
-    console.log(arrayOfNumbers);
-    return arrayOfNumbers;
-}
-    
+   const arr = [1,3,4,56,7,8];
+   console.log (arr.length);
