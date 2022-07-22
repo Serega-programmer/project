@@ -118,30 +118,6 @@ if (4 == 9) {
 // const num =50;
 // if(num<49){
 //     console.log(`Error`);
-
-// п.24 ФУНКЦИИ, СТРЕЛОЧНЫЕ ФУНКЦИИ (ES6)
-
-let num = 20;
-function showFirstMessage(text) {
-    console.log(text);
-    // let num = 10;
-    console.log(num);
-}
-showFirstMessage("Hello world!");
-console.log(num);
-
-console.log(calc(4,3));
-console.log(calc(5,6));
-console.log(calc(10,6));
-
-function calc(a,b) {
-return(a+b);
-}
-
-const logger = function () {
-    console.log("Hello");
-};
-logger();
 // } else if(num>100) {
 //     console.log(`Много`);
 // } else {
@@ -228,8 +204,6 @@ if (hamburger===3 && cola===2 || fries===3 && nuggets) {
 }
 console.log(hamburger===3 && cola===2 || fries===3 && nuggets);
 
-console.log(hamburger===3 && cola===2 || fries===3 && nuggets);
-
 // п.31 Callback-функции
 
 function first() {
@@ -253,3 +227,45 @@ function done () {
     console.log(`Я прошел это урок`);
 }
 learnJS(`Javascript`, done);
+
+// п.32 ОБЪЕКТЫ, ДЕСТРУКТУРИЗАЦИЯ ОБЪЕКТОВ (ES6)
+
+const options = {
+    name: `test`,
+    width: 1024,
+    heigth: 1024,
+    colors: {
+        border: `black`,
+        bg: `red`
+    },
+    makeTest : function () {
+        console.log("Test");
+    }
+    };
+    options.makeTest();
+
+    const {border,bg} = options.colors;
+    console.log(border);
+    
+
+console.log(Object.keys(options));
+// // console.log(options.name);
+
+// // delete options.name;
+// console.log(options);
+
+// let counter = 0;
+
+// for (let key in options) {
+//     // if (typeof(options [key]) === `object`) {
+//     //     for(let i in options[key]) {
+//     //         console.log(`Свойство ${i} имеет значение ${options[key] [i]}`);
+//             counter++;
+//     //     }
+//     //     } else {
+//     //         counter++;
+//     //         console.log(`Свойство ${key} имеет значение ${options[key]}`); 
+   
+// }
+// // }
+// console.log(counter++);
