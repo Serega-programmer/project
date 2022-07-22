@@ -227,3 +227,29 @@ if (hamburger===3 && cola===2 || fries===3 && nuggets) {
     console.log(`Мы уходим`);
 }
 console.log(hamburger===3 && cola===2 || fries===3 && nuggets);
+
+console.log(hamburger===3 && cola===2 || fries===3 && nuggets);
+
+// п.31 Callback-функции
+
+function first() {
+    // Do something
+    setTimeout(function() {
+        console.log (1);
+    }, 500);
+}
+
+function second () {
+    console.log(2);
+}
+first();
+second();
+
+function learnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
+}
+function done () {
+    console.log(`Я прошел это урок`);
+}
+learnJS(`Javascript`, done);
