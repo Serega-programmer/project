@@ -269,3 +269,29 @@ console.log(Object.keys(options));
 // }
 // // }
 // console.log(counter++);
+
+// п.33 МАССИВЫ И ПСЕВДОМАССИВЫ
+
+const arr = [0, 1, 2, 3, 6, 8, 12,14];
+// arr.pop(); - удаляет последнее число в массиве
+// arr.push(10);
+
+// for (let i = 0; i< arr.length; i++) {
+//     console.log(arr[i]); - 1 вариант перебора массива при добавлении/удалении чисел в нем
+// }
+
+// for (let value of arr) {
+//     console.log(value); - 2 вариант перебора массива
+// }
+
+// arr.forEach (function (item, i, arr) {
+//     console.log (`${i}: ${item} внутри массива ${arr} `);
+
+// }); - 3 вариант переборки массива с помощью forEach
+
+// 3-й метод массива: str.split(s)
+
+const str = prompt("", "");
+const products = str.split(",");
+console.log(products);
+
