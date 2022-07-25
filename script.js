@@ -295,3 +295,63 @@ const str = prompt("", "");
 const products = str.split(",");
 console.log(products);
 
+
+function copy (mainObj) {
+    let objCopy = {};
+    let key;
+    for (key in mainObj){
+        objCopy[key] = mainObj[key];
+    }
+    return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b:5,
+    c: {
+        x:7,
+        y:4
+    }
+};
+
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+
+// console.log(newNumbers);
+// console.log(numbers);
+
+const add = {
+    d:17,
+    e:20
+};
+// console.log(Object.assign(numbers, add));
+// Cделаем копию
+const clone = Object.assign ({}, add);
+clone.d =20;
+console.log(add);
+console.log(clone);
+
+// Создание поверхностной копии в массиве
+
+const oldArray = [`a`, `b`, `c`];
+const newArray = oldArray.slice();
+
+newArray[1] = `ФРАЗА`;
+
+console.log(newArray);
+console.log(oldArray);
+
+// Оператор разворота: spread
+
+const video = [`youtube`, `rutube`, `vimeo`],
+      blogs = [`wordpress`, `mail`, `livejournal`],
+      internet = [...video, ...blogs, `vk`, `facebook`];
+      console.log(internet);
+
+      
+      
+      const q = {
+        one: 1,
+        two: 2
+      };
+      const newObj = {...q};
