@@ -38,3 +38,4 @@ const str = prompt("", "");
 const products = str.split(",");
 products.sort();
 console.log(products.join(";"));
+
