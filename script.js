@@ -295,6 +295,7 @@ const str = prompt("", "");
 const products = str.split(",");
 console.log(products);
 
+// п.35  ПЕРЕДАЧА ДАННЫХ ПО ССЫЛКЕ ИЛИ ПО ЗНАЧЕНИЮ, SPREAD
 
 function copy (mainObj) {
     let objCopy = {};
