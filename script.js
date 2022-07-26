@@ -295,6 +295,24 @@ const str = prompt("", "");
 const products = str.split(",");
 console.log(products);
 
+// п.34 ПЕРЕДАЧА ПО ССЫЛКЕ ИЛИ ПО ЗНАЧЕНИЮ, SPREAD ОПЕРАТОР (ES6-ES9)
+
+let a = 5,
+    b = a;
+    b = b+5;
+    console.log(b);
+    console.log(a);
+
+    const obj = {
+        a:5,
+        b:1
+    };
+    const copy = obj;
+    copy.a = 10;
+    console.log(copy);
+    console.log(obj);
+
+
 
 function copy (mainObj) {
     let objCopy = {};
