@@ -133,20 +133,20 @@ if (4 == 9) {
 // Если модификаций if очень много, то их упрощаем  с помощью switch
 const num = 50;
 switch (num) {
-    case 49:
-        console.log(`Неверно`);
-        // break - всегда идет после console.log!!!
-        break;
+case 49:
+    console.log(`Неверно`);
+    // break - всегда идет после console.log!!!
+    break;
     case 100:
         console.log(`Неверно`);
         break;
-    case 50:
-        console.log(`В точку!`);
-        break;
-    // Может case не выполнятся (если одно из условий не подошло), тогда используем default
-    default:
-        console.log(`Не в этот раз`);
-}
+        case 50:
+            console.log(`В точку!`);
+            break;
+            // Может case не выполнятся (если одно из условий не подошло), тогда используем default
+            default:
+                console.log(`Не в этот раз`);
+} 
 // п.21 ЛОГИЧЕСКИЕ ОПЕРАТОРЫ
 // const hamburger = true;
 // const fries = true;
@@ -197,23 +197,23 @@ const hamburger = 3;
 const fries = 3;
 const cola = 0;
 const nuggets = 2;
-if (hamburger === 3 && cola === 2 || fries === 3 && nuggets) {
+if (hamburger===3 && cola===2 || fries===3 && nuggets) {
     console.log(`Все довольны`);
 } else {
     console.log(`Мы уходим`);
 }
-console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+console.log(hamburger===3 && cola===2 || fries===3 && nuggets);
 
 // п.31 Callback-функции
 
 function first() {
     // Do something
-    setTimeout(function () {
-        console.log(1);
+    setTimeout(function() {
+        console.log (1);
     }, 500);
 }
 
-function second() {
+function second () {
     console.log(2);
 }
 first();
@@ -223,7 +223,7 @@ function learnJS(lang, callback) {
     console.log(`Я учу: ${lang}`);
     callback();
 }
-function done() {
+function done () {
     console.log(`Я прошел это урок`);
 }
 learnJS(`Javascript`, done);
@@ -238,15 +238,15 @@ const options = {
         border: `black`,
         bg: `red`
     },
-    makeTest: function () {
+    makeTest : function () {
         console.log("Test");
     }
-};
-options.makeTest();
+    };
+    options.makeTest();
 
-const { border, bg } = options.colors;
-console.log(border);
-
+    const {border,bg} = options.colors;
+    console.log(border);
+    
 
 console.log(Object.keys(options));
 // // console.log(options.name);
@@ -265,14 +265,14 @@ console.log(Object.keys(options));
 //     //     } else {
 //     //         counter++;
 //     //         console.log(`Свойство ${key} имеет значение ${options[key]}`); 
-
+   
 // }
 // // }
 // console.log(counter++);
 
 // п.33 МАССИВЫ И ПСЕВДОМАССИВЫ
 
-const arr = [0, 1, 2, 3, 6, 8, 12, 14];
+const arr = [0, 1, 2, 3, 6, 8, 12,14];
 // arr.pop(); - удаляет последнее число в массиве
 // arr.push(10);
 
@@ -295,70 +295,64 @@ const str = prompt("", "");
 const products = str.split(",");
 console.log(products);
 
-// п.34 ПЕРЕДАЧА ПО ССЫЛКЕ ИЛИ ПО ЗНАЧЕНИЮ, SPREAD ОПЕРАТОР (ES6-ES9)
+// п.35  ПЕРЕДАЧА ДАННЫХ ПО ССЫЛКЕ ИЛИ ПО ЗНАЧЕНИЮ, SPREAD
 
-let a = 5,
-    b = a;
-    b = b+5;
-    console.log(b);
-    console.log(a);
-
-    const obj = {
-        a:5,
-        b:1
-    };
-    const copy = obj;
-    copy.a = 10;
-    console.log(copy);
-    console.log(obj);
-
-    function copy (mainObj) {
-        let objCopy = {};
-        let key;
-        for (key in mainObj){
-            objCopy[key] = mainObj[key];
-        }
-        return objCopy;
+function copy (mainObj) {
+    let objCopy = {};
+    let key;
+    for (key in mainObj){
+        objCopy[key] = mainObj[key];
     }
-    const numbers = {
-        a: 2,
-        b:5,
-        c: {
-            x:7,
-            y:4
-        }
-    };
-    const newNumbers = copy(numbers);
-    newNumbers.a = 10;
-    // console.log(newNumbers);
-    // console.log(numbers);
-    const add = {
-        d:17,
-        e:20
-    };
-    // console.log(Object.assign(numbers, add));
-    // Cделаем копию
-    const clone = Object.assign ({}, add);
-    clone.d =20;
-    console.log(add);
-    console.log(clone);
-    // Создание поверхностной копии в массиве
-    const oldArray = [`a`, `b`, `c`];
-    const newArray = oldArray.slice();
-    newArray[1] = `ФРАЗА`;
-    console.log(newArray);
-    console.log(oldArray);
-    // Оператор разворота: spread
-    const video = [`youtube`, `rutube`, `vimeo`],
-          blogs = [`wordpress`, `mail`, `livejournal`],
-          internet = [...video, ...blogs, `vk`, `facebook`];
-          console.log(internet);
-          
-          
-          const q = {
-            one: 1,
-            two: 2
-          };
-          const newObj = {...q}; 
-       
+    return objCopy;
+}
 
+const numbers = {
+    a: 2,
+    b:5,
+    c: {
+        x:7,
+        y:4
+    }
+};
+
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+
+// console.log(newNumbers);
+// console.log(numbers);
+
+const add = {
+    d:17,
+    e:20
+};
+// console.log(Object.assign(numbers, add));
+// Cделаем копию
+const clone = Object.assign ({}, add);
+clone.d =20;
+console.log(add);
+console.log(clone);
+
+// Создание поверхностной копии в массиве
+
+const oldArray = [`a`, `b`, `c`];
+const newArray = oldArray.slice();
+
+newArray[1] = `ФРАЗА`;
+
+console.log(newArray);
+console.log(oldArray);
+
+// Оператор разворота: spread
+
+const video = [`youtube`, `rutube`, `vimeo`],
+      blogs = [`wordpress`, `mail`, `livejournal`],
+      internet = [...video, ...blogs, `vk`, `facebook`];
+      console.log(internet);
+
+      
+      
+      const q = {
+        one: 1,
+        two: 2
+      };
+      const newObj = {...q};
