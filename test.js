@@ -30,6 +30,7 @@ console.log(result);
 
 const answer = +prompt(`Вам есть 18?`, `18`);
 console.log(answer + 5);
+debugger;
 
 if (4==4) {
     console.log(`OK!`);
@@ -56,6 +57,9 @@ if (4==4) {
             break;
             case 100:
                 console.log(`Не верно`);
-                case 50:
-                    console.log(`В точку`);
+                break;
+                case 51:
+                    console.log(`Еще разок`);
+                    default:
+                        console.log(`Не в этот раз`);
     }
