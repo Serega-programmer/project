@@ -371,3 +371,18 @@ John.sayHello();
 
 // п.38 ОТЛАВЛИВАЕМ ОШИБКИ В СВОЕМ КОДЕ ПРИ ПОМОЩИ КОНСОЛИ РАЗРАБОТЧИКА
 // П. 39. ДИНАМИЧЕСКАЯ ТИПИЗАЦИЯ В JS
+// 1-ый вариант:
+
+console.log(String(null));
+console.log(typeof(String(4)));
+
+// 2-й вариант
+// Конкатинация
+let answ = +prompt("Hello world", "");
+
+// 3-й вариант динамической типизации
+// буллиновое значение
+
+// 0, "", null, undefined, NaN - false
+
+let switcher = null;
