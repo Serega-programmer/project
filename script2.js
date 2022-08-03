@@ -33,9 +33,14 @@
 // }
 // sayHello ("Alex");
 const arr = [0, 1, 2, 3, 6, 8, 12,14];
+arr.sort(compareNum);
+console.log(arr);
+function compareNum(a,b) {
+    return a-b;
+}
 
-const str = prompt("", "");
-const products = str.split(",");
-products.sort();
-console.log(products.join(";"));
+// const str = prompt("", "");
+// const products = str.split(",");
+// products.sort();
+// console.log(products.join(";"));
 
